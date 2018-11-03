@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="../js/layui/css/layui.css">
+    <script src="../js/layui/layui.js"></script>
+</head>
+<body class="layui-layout-body">
+    <div class="layui-form">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">日期范围</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="lstime" placeholder=" - ">
+                </div>
+            </div>
+            <button class="layui-btn">搜索</button>
+            <button class="layui-btn">设置指标</button>
+            <button class="layui-btn">导出</button>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">报表</label>
+            <div class="layui-input-inline">
+                <select name="city" lay-verify="type" class="layui-input">
+                    <option value="0">数据日报</option>
+                    <option value="010">数据月报</option>
+                    <option value="021">未定义</option>
+                    <option value="0571">未定义</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    layui.use('form', function(){
+        var form = layui.form;
+        form.render();
+    });
+    layui.use('laydate', function(){
+    var laydate = layui.laydate;
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#lstime'
+        ,range: true //或 range: '~' 来自定义分割字符
+    });
+});
+</script>
+</html>
