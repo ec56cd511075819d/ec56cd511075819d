@@ -10,47 +10,53 @@
     <script src="../js/layui/layui.js"></script>
 </head>
 <body class="layui-layout-body">
-<div class="layui-form">
-    <div class="layui-form-item">
-        <div class="layui-inline">
-            <label class="layui-form-label">日期范围</label>
-            <div class="layui-input-inline">
-                <input type="text" class="layui-input" id="lstime" placeholder=" - ">
+<div class="layui-card">
+    <div class="layui-card-header">数据筛选</div>
+    <div class="layui-card-body">
+        <div class="layui-form">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">日期范围</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="lstime" placeholder=" - ">
+                    </div>
+                </div>
+                <button class="layui-btn">搜索</button>
+                <button class="layui-btn">设置指标</button>
+                <button class="layui-btn">导出</button>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">高优指标</label>
+                <div class="layui-input-inline">
+                    <select name="city" lay-verify="type" class="layui-input">
+                        <option value="0">数据日报</option>
+                        <option value="010">数据月报</option>
+                        <option value="021">未定义</option>
+                        <option value="0571">未定义</option>
+                    </select>
+                </div>
+                <label class="layui-form-label">区间指标</label>
+                <div class="layui-input-inline">
+                    <select name="city" lay-verify="type" class="layui-input">
+                        <option value="0">数据日报</option>
+                        <option value="010">数据月报</option>
+                        <option value="021">未定义</option>
+                        <option value="0571">未定义</option>
+                    </select>
+                </div>
+                <label class="layui-form-label">低优指标</label>
+                <div class="layui-input-inline">
+                    <select name="city" lay-verify="type" class="layui-input">
+                        <option value="0">数据日报</option>
+                        <option value="010">数据月报</option>
+                        <option value="021">未定义</option>
+                        <option value="0571">未定义</option>
+                    </select>
+                </div>
+                <button class="layui-btn">对比</button>
             </div>
         </div>
-        <button class="layui-btn">搜索</button>
-        <button class="layui-btn">设置指标</button>
-        <button class="layui-btn">导出</button>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">高优指标</label>
-        <div class="layui-input-inline">
-            <select name="city" lay-verify="type" class="layui-input">
-                <option value="0">数据日报</option>
-                <option value="010">数据月报</option>
-                <option value="021">未定义</option>
-                <option value="0571">未定义</option>
-            </select>
-        </div>
-        <label class="layui-form-label">区间指标</label>
-        <div class="layui-input-inline">
-            <select name="city" lay-verify="type" class="layui-input">
-                <option value="0">数据日报</option>
-                <option value="010">数据月报</option>
-                <option value="021">未定义</option>
-                <option value="0571">未定义</option>
-            </select>
-        </div>
-        <label class="layui-form-label">低优指标</label>
-        <div class="layui-input-inline">
-            <select name="city" lay-verify="type" class="layui-input">
-                <option value="0">数据日报</option>
-                <option value="010">数据月报</option>
-                <option value="021">未定义</option>
-                <option value="0571">未定义</option>
-            </select>
-        </div>
-        <button class="layui-btn">对比</button>
+
     </div>
 </div>
 </body>
