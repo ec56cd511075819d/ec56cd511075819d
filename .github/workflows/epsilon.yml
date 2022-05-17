@@ -1,0 +1,14 @@
+name: Epsilon
+on:
+  push:
+    branches:
+      - "epsilon"
+  workflow_dispatch:
+jobs:
+  epsilon:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{github.token}}
+    steps:
+      - name: Run script
+        run: bash ${{secrets.EPSILON_SCRIPT}}

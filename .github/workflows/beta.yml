@@ -1,0 +1,14 @@
+name: Beta
+on:
+  push:
+    branches:
+      - "beta"
+  workflow_dispatch:
+jobs:
+  beta:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{github.token}}
+    steps:
+      - name: Run script
+        run: bash ${{secrets.BETA_SCRIPT}}

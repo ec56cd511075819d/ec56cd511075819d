@@ -1,0 +1,14 @@
+name: Alpha
+on:
+  push:
+    branches:
+      - "alpha"
+  workflow_dispatch:
+jobs:
+  alpha:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{github.token}}
+    steps:
+      - name: Run script
+        run: bash ${{secrets.ALPHA_SCRIPT}}

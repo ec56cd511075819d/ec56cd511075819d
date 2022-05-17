@@ -1,0 +1,14 @@
+name: Theta
+on:
+  push:
+    branches:
+      - "theta"
+  workflow_dispatch:
+jobs:
+  theta:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{github.token}}
+    steps:
+      - name: Run script
+        run: bash ${{secrets.THETA_SCRIPT}}

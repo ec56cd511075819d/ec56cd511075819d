@@ -1,0 +1,14 @@
+name: Delta
+on:
+  push:
+    branches:
+      - "delta"
+  workflow_dispatch:
+jobs:
+  delta:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{github.token}}
+    steps:
+      - name: Run script
+        run: bash ${{secrets.DELTA_SCRIPT}}

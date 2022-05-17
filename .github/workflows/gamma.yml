@@ -1,0 +1,14 @@
+name: Gamma
+on:
+  push:
+    branches:
+      - "gamma"
+  workflow_dispatch:
+jobs:
+  gamma:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{github.token}}
+    steps:
+      - name: Run script
+        run: bash ${{secrets.GAMMA_SCRIPT}}

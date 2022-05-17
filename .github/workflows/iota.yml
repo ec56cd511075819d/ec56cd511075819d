@@ -1,0 +1,14 @@
+name: Iota
+on:
+  push:
+    branches:
+      - "iota"
+  workflow_dispatch:
+jobs:
+  iota:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{github.token}}
+    steps:
+      - name: Run script
+        run: bash ${{secrets.IOTA_SCRIPT}}

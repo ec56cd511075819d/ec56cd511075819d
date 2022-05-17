@@ -1,0 +1,14 @@
+name: Kappa
+on:
+  push:
+    branches:
+      - "kappa"
+  workflow_dispatch:
+jobs:
+  kappa:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{github.token}}
+    steps:
+      - name: Run script
+        run: bash ${{secrets.KAPPA_SCRIPT}}

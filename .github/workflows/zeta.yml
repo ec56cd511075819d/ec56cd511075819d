@@ -1,0 +1,14 @@
+name: Zeta
+on:
+  push:
+    branches:
+      - "zeta"
+  workflow_dispatch:
+jobs:
+  zeta:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{github.token}}
+    steps:
+      - name: Run script
+        run: bash ${{secrets.ZETA_SCRIPT}}
